@@ -1,0 +1,16 @@
+{% extends "photo_app/base.html" %}
+{% block title %}
+      Index
+{% endblock %}
+
+{% block content %}
+{% for up in upload %}
+<img src="{{up.photo.url}}" alt="pic" style="height: 50px;width:50px;">
+<h1>{{up.caption}}</h1>
+<h1>{{up.User}}</h1>
+<h1>{{up.time_stamp}}</h1>
+
+{% endfor %}
+
+{% endblock %}
+
